@@ -1,0 +1,94 @@
+/* Main sections */
+main{
+z-index: 1;
+}
+/* Main */
+section{
+    width: fit-content;
+}
+#aboutCeci{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+}
+.ceciText{
+    align-self: center;
+}
+#aboutCeci img{
+    width: 40%;
+    margin: auto;
+    height: 500px;
+
+}
+#aboutCeci h1{
+    width: 50%;
+    border-bottom: 3px solid #E6A197;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+#aboutCeci p{
+    font-family: 'Petrona';
+    font-size: 1.5em;
+    width:80%;
+}
+
+#aboutPieces{
+    display: flex;
+    width: 80%;
+    margin: 0 auto 40px auto;
+}
+#aboutPieces img{
+    width: 40%;
+    margin: auto;
+    height: 500px;
+
+}
+.piecesText{
+    margin-left: 200px;
+    padding:5px;
+    width: 100%;
+    align-self: center;
+}
+#aboutPieces h1{
+    width: 50%;
+    border-bottom: 3px solid #E6A197;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#aboutPieces p{
+    font-family: 'Petrona';
+    font-size: 1.5em;
+    width:100%;
+}
+
+@media (max-width:680px){
+    #aboutCeci{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px;
+        font-size: small;
+    }
+    #aboutCeci img{
+        width: 90%;
+        margin:0 auto 10px auto;
+        height: auto;
+    
+    }
+    #aboutPieces{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        font-size: small;
+    }
+    .piecesText{
+        margin: 20px auto;
+    }
+    #aboutPieces img{
+        width: 90%;
+        margin:0 auto 10px auto;
+        height: auto;
+    
+    }
+}
+

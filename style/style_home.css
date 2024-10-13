@@ -1,0 +1,237 @@
+
+/* Main sections */
+main{
+z-index: 1;}
+
+/* Carousel */
+#carousel{
+    max-width:fit-content;
+    position: relative;
+    margin: auto;
+}
+
+/* Style arrows buttons */
+.leftArrow, .rightArrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px; /* Ancho y alto iguales para hacer el botón circular */
+    height: 40px; 
+    margin-top: -25px; /* Mitad del height para centrar verticalmente */
+    display: flex; /* Centrar el contenido */
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    transition: background-color 0.3s ease; /* Suavizar el hover */
+    background-color: #E6A197;
+    border: #FFE0E6 3px solid;
+    border-radius: 50%; /* Asegurar la forma circular */
+    user-select: none;
+}
+
+/* Position the right button to the right */
+.rightArrow{
+    right: 0;
+    margin-right: 5px;
+}
+.leftArrow{
+    margin-left: 5px;
+}
+/* Hover of the buttons, it will inverse colors */
+.leftArrow:hover, .rightArrow:hover{
+    background-color: #FFE0E6;
+    border: #E6A197 3px solid;
+}
+
+.slides{
+    position: relative;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.slides img{
+    width:100%;
+    vertical-align: middle;
+    margin-top: 20px;
+    height: 600px;
+}
+.text-slide{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* To center de text */
+    transform: translate(-50%, -50%); 
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#dots-slides {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    margin-top: 5px;
+    width: 100%;  
+    margin-bottom: 20px;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color:#FFE0E6 ;
+    border-radius: 50%;
+    border: black 0.5px solid;
+    align-items: center;
+    display: inline-block;
+    transition: background-color 0.6 ease;
+}
+.active{
+    background-color: #E6A197;
+}
+
+/* Keyframe for sliding the slides */
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Media Queries for the carousel */
+@media only screen and (max-width:900px){
+    #carousel{
+        width: fit-content;
+    }
+    .text-slide{
+        font-size: 20px;
+    }
+    .rightArrow, .leftArrow{
+        font-size: 20px;
+        width: 30px; /* Ancho y alto iguales para hacer el botón circular */
+        height: 30px; 
+    }
+    .slides img{
+        width: 100%;
+        height: auto;
+    }
+}
+/* Links center */
+#linksCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffe0e62d;
+    padding: 10px 0 10px 0;
+    margin: 40px 0 20px 0;
+    /* width: 100%; */
+}
+#linksCenter :hover{
+    text-decoration: underline 2px #E6A197;
+}
+.iconCenter {
+    text-align: center;
+}
+
+@media only screen and (max-width:800px) {
+    .iconCenter img{
+        width: 100px
+    }    
+}
+/* Collections home */
+.collection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0;
+}
+#photoCollection h1{
+    text-align: center;
+    margin-top: 20px;
+}
+#photoCollection h1:hover{
+    text-decoration: underline 2px #E6A197;
+}
+
+.collectionEgg{
+    background-image: url(../photos/photoHome_Eggs.jpeg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px ;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.collectionFaces{
+    background-image: url(../photos/photoHome_Faces.jpeg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px ;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.collectionFlowers{
+    background-image: url(../photos/photoHome_Flowers.jpeg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px ;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.collectionOthers{
+    background-image: url(../photos/photoHome_Others.jpeg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px ;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+button{
+    font-size: 3em;
+    background-color: transparent;
+    border: none;
+    padding:150px 0 40px 170px;
+}
+
+
+
+
+
+
+
+
