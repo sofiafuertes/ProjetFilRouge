@@ -9,20 +9,16 @@ console.log(messageForm);
 
 const errorMessageName = document.createElement("div");
 nameForm.after(errorMessageName);
-errorMessageName.innerHTML = ``;
+errorMessageName.innerText = ``;
 errorMessageName.style.color = "red";
 
 /**
- * Validates the 'nameForm' input on blur event.
- * 
- * This function checks if the input contains only letters and spaces,
- * with a length between 2 and 50 characters. If the input is valid,
- * it clears any error messages. If invalid, it displays an error message.
- *
- * @global {boolean} isFilledName - Tracks whether the 'nameForm' input has been filled.
- * @event blur - Triggered when the input field loses focus.
- * @regex /^[\p{L}\s]{2,50}$/u - Allows any Unicode letter (including accented characters) and spaces.
- */
+This function checks if the input contains only letters and spaces,
+If the input is valid,it clears any error messages. If invalid, it displays an error message.
+
+isFilledName - Tracks whether the 'nameForm' input has been filled.
+event blur - Triggered when the input field loses focus.
+regex /^[\p{L}\s]{2,50}$/u - Allows any Unicode letter (including accented characters) and spaces.*/
 
 let isFilledName = false;
 nameForm.addEventListener("blur", () => {
@@ -32,16 +28,16 @@ nameForm.addEventListener("blur", () => {
     }
     if (isFilledName) {
         if (nameRegex.test(nameForm.value)) {
-            errorMessageName.innerHTML = ``;
+            errorMessageName.innerText = ``;
         } else {
-            errorMessageName.innerHTML = `- Name is not correct. Please don't use numbers or special characters (except for accents).`;
+            errorMessageName.innerText = `- Name is not correct. Please don't use numbers or special characters (except for accents).`;
         }
     }
 });
 
 const errorMessageMail = document.createElement("div");
 mailForm.after(errorMessageMail);
-errorMessageMail.innerHTML = ``;
+errorMessageMail.innerText = ``;
 errorMessageMail.style.color = "red";
 
 let isFilledMail = false;
@@ -53,16 +49,26 @@ mailForm.addEventListener("blur", () => {
     }
     if (isFilledMail) {
         if (mailRegex.test(mailForm.value)) {
-            errorMessageMail.innerHTML = ``;
+            errorMessageMail.innerText = ``;
         } else {
-            errorMessageMail.innerHTML = `- Mail format is invalid. Please verify and try again.`;
+            errorMessageMail.innerText = `- Mail format is invalid. Please verify and try again.`;
         }
     }
 });
 
+/**
+This function validates the input from 'messageForm'.
+If the input is valid, it clears any error messages. If invalid, it displays a message with specific requirements.
+
+isFilledMessage - Tracks whether the 'messageForm' input has been filled.
+event blur - Triggered when the input field loses focus.
+regex /^[a-zA-Z0-9\s.,!?'\-()]{20,600}$/ - Allows alphanumeric characters, spaces, and common punctuation.
+By restricting input to this regex pattern, we help prevent potential SSC injection attacks.
+*/
+
 const errorMessageText = document.createElement("div");
 messageForm.after(errorMessageText);
-errorMessageText.innerHTML = ``;
+errorMessageText.innerText = ``;
 errorMessageText.style.color = `red`;
 
 let isFilledMessage = false;
@@ -74,9 +80,10 @@ messageForm.addEventListener("blur", () => {
     }
     if (isFilledMessage) {
         if (messageRegex.test(messageForm.value)) {
-            errorMessageText.innerHTML = ``;
+            errorMessageText.innerText = ``;
         } else {
-            errorMessageText.innerHTML = `- Your message must be between 20 and 600 characters long. Please use only letters, numbers, spaces, and the following punctuation: . , ! ? ' - ( )`;
+            errorMessageText.innerHTML = `- Your message must be between 20 and 600 characters long. 
+            Please use only letters, numbers, spaces, and the following punctuation: . , ! ? ' - ( )`;
         }
     }
 });
