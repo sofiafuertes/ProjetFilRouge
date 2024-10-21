@@ -5,10 +5,10 @@ class Model_Form {
     private ?string $last_name;
     private ?string $mail;
     private ?string $password;
-    private ?string $passwordConfirm;
 
-
-    public function __construct(?string $mail, ?string $password){
+    public function __construct(?string $first_name = null, ?string $last_name = null, ?string $mail = null, ?string $password = null) {
+        $this->first_name = $first_name;
+        $this->last_name = $last_name;
         $this->mail = $mail;
         $this->password = $password;
     }
@@ -21,13 +21,6 @@ class Model_Form {
         $this->mail = $mail;
         return $this;
     }
-    public function getMessage(): ?string {
-        return $this->message;
-    }
-    public function setMessage(?string $message): self {
-        $this->message = $message;
-        return $this;
-    }    
     public function getFirstName(): ?string {
         return $this->first_name;
     }
@@ -35,18 +28,21 @@ class Model_Form {
         $this->first_name = $first_name;
         return $this;
     }
+    public function getLastName(): ?string {
+        return $this->last_name;
+    }
+    public function setLastName(?string $last_name): self {
+        $this->last_name = $last_name;
+        return $this;
+    }
     public function getPassword(): ?string {
         return $this->password;
     }
-    public function setPassword(?string $password): self {
+    public function setPassword(?string $password): self | string {
+        if ($password !== null && strlen($password) < 8) {
+            return 'Password must be at least 8 characters long';
+        }
         $this->password = $password;
-        return $this;
-    }
-    public function getPasswordConfirm(): ?string {
-        return $this->passwordConfirm;
-    }
-    public function setPasswordConfirm(?string $passwordConfirm): self {
-        $this->passwordConfirm = $passwordConfirm;
         return $this;
     }
 }
