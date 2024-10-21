@@ -29,6 +29,4 @@
             </a>
         </div>
     </footer>
-    <script type="module" src="./javascript/header.js"></script>
-    <script type="module" src="./javascript/carousel.js"></script>
 </body>

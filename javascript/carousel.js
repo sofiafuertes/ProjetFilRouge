@@ -1,11 +1,11 @@
 //* Carousel
 const leftArrow = document.querySelector(".leftArrow");
-console.log(leftArrow);
+// console.log(leftArrow);
 const rightArrow = document.querySelector(".rightArrow");
-console.log(rightArrow);
+// console.log(rightArrow);
 
 let dots = document.querySelectorAll(".dot");
-console.log(dots[1]);
+// console.log(dots[1]);
 
 let slideIndex = 1;
 let previousIndex = 1;

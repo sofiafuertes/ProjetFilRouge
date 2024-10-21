@@ -1,3 +1,4 @@
+<script type="module" src="./javascript/header.js" defer></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,8 @@
     <header>
         <nav aria-label="Main Navigation">
             <div class="navbar">
-                <a href="index.php"><img class="logoHeader" src="./photos/logoHeader.png" alt="Logo CeciCo"></a>
+                <a href="/ProjetFilRouge/ProjetFilRouge/home"><img class="logoHeader" src="./photos/logoHeader.png"
+                        alt="Logo CeciCo"></a>
                 <div class="barRight">
                     <img src="./icons/icon_globe.png" alt="Icon language" width="30px">
                     <img src="./icons/icon_cart.png" alt="Icon cart" width="30px">
@@ -23,16 +25,17 @@
                 </div>
                 <div class="centerNav">
                     <ul class="navPages">
-                        <li id="homePage"><a href="index.php">HOME</a></li>
-                        <li id="aboutMe"><a href="aboutMe.php">ABOUT ME</a></li>
-                        <li id="products"><a href="products.php">PRODUCTS</a></li>
-                        <li id="contact"><a href="contact.php">CONTACT</a></li>
+                        <li id="homePage"><a href="/ProjetFilRouge/ProjetFilRouge/home">HOME</a></li>
+                        <li id="aboutMe"><a href="/ProjetFilRouge/ProjetFilRouge/AboutMe">ABOUT ME</a></li>
+                        <li id="products"><a href="/ProjetFilRouge/ProjetFilRouge/products">PRODUCTS</a></li>
+                        <li id="contact"><a href="/ProjetFilRouge/ProjetFilRouge/Contact">CONTACT</a></li>
                         <li id="etsyShop"><a
                                 href="https://www.etsy.com/fr/shop/CecicoCeramics?ref=l2-about-shopname&from_page=listing">ETSY
                                 SHOP</a></li>
-                        <li id="login"><a href="login.php">LOGIN</a></li>
-                        <li id="account"><a href="account.php"><img src="./icons/icon_user.png"
-                                    alt="Icon account" width="25px"></a></li>
+                        <li id="login"><a href="/ProjetFilRouge/ProjetFilRouge/login">LOGIN</a></li>
+                        <li id="account"><a href="account.php"><img src="./icons/icon_user.png" alt="Icon account"
+                                    width="25px"></a></li>
+                        <li id="deconnexion"><a href="/ProjetFilRouge/ProjetFilRouge/deconnexion">LOG OUT</a></li>
                     </ul>
         </nav>
         </div>

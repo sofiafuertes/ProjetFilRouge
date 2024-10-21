@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="./style/style_contact.css">
-<script type="module" src="./javascript/forms.js"></script>
+<script type="module" src="./javascript/forms.js" defer></script>
 <main>
         <div id="formContact">
             <section id="thankYouPhoto">
