@@ -2,7 +2,7 @@
 RewriteEngine On
 
 #base du projet (emplacement a partir de la racine du serveur)
-RewriteBase /ProjetFilRouge/ProjetFilRouge
+RewriteBase /ProjetFilRouge
 
 #si c'est pas un repertoire
 RewriteCond %{REQUEST_FILENAME} !-d
