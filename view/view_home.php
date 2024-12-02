@@ -1,5 +1,6 @@
 
     <link rel="stylesheet" href="./style/style_home.css">
+    <script type="module" src="./javascript/carousel.js" defer></script>
     <main>
     <!--  carousel -->
         <section id="carousel" aria-label="Website Content Carousel">

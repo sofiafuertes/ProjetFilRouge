@@ -51,7 +51,6 @@ class Account
             $this->setFirstName($_SESSION["first_name"]);
             $this->setLastName($_SESSION["last_name"]);
             $this->setMail($_SESSION["mail"]);
-            
         }
     }
 }

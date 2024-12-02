@@ -17,42 +17,57 @@ $path = isset($url['path']) ? $url['path'] : '/';
 //test de la valeur $path dans l'URL et import de la ressource
 switch ($path) {
 
-    case $path === "/ProjetFilRouge/ProjetFilRouge/home":
+    case $path === "/ProjetFilRouge/home":
         include './utils/functions.php';
         include './modele/modele_home.php';
+        include './controler/header.php';
         include './controler/home.php';
+        $header = new Header();
+        $header->displayNav();
         include './view/view_header.php';
         include './view/view_home.php';
         include './view/view_footer.php';
         break;
 
-    case $path === "/ProjetFilRouge/ProjetFilRouge/AboutMe":
+    case $path === "/ProjetFilRouge/AboutMe":
         include './utils/functions.php';
         include './modele/modele_aboutMe.php';
+        include './controler/header.php';
         include './controler/aboutMe.php';
+        $header = new Header();
+        $header->displayNav();
         include './view/view_header.php';
         include './view/view_aboutMe.php';
         include './view/view_footer.php';
         break;
 
-    case $path === "/ProjetFilRouge/ProjetFilRouge/Contact":
+    case $path === "/ProjetFilRouge/Contact":
         include './utils/functions.php';
+        include './controler/header.php';
         include './controler/contact.php';
+        $header = new Header();
+        $header->displayNav();
         include './view/view_header.php';
         include './view/view_contact.php';
         include './view/view_footer.php';
         break;
 
-    case $path === "/ProjetFilRouge/ProjetFilRouge/products":
+    case $path === "/ProjetFilRouge/products":
         include './utils/functions.php';
+        include './controler/header.php';
         include './controler/products.php';
+        $header = new Header();
+        $header->displayNav();
         include './view/view_header.php';
         include './view/view_products.php';
         include './view/view_footer.php';
         break;
 
-    case $path === "/ProjetFilRouge/ProjetFilRouge/login":
+    case $path === "/ProjetFilRouge/login":
         include './utils/functions.php';
+        include './controler/header.php';
+        $header = new Header();
+        $header->displayNav();
         include './modele/modele_form.php';
         include './manager/manager_form.php';
         include './controler/login.php';
@@ -72,18 +87,21 @@ switch ($path) {
         include './view/view_footer.php';
         break;
 
-        case $path === "/ProjetFilRouge/ProjetFilRouge/account":
+        case $path === "/ProjetFilRouge/account":
             include './utils/functions.php';
+            include './controler/header.php';
             include './controler/account.php';
             $account = new Account();
             $account->displayUserAccount();
+            $header = new Header();
+            $header->displayNav();
             include './view/view_header.php';
             include './view/view_account.php';
             include './view/view_footer.php';
             break;
 
 
-        case $path === "//ProjetFilRouge/ProjetFilRouge/deconnexion":
+        case $path === "/ProjetFilRouge/deconnexion":
             include './controler/deco.php';
             $deco = new Deconnexion();
             $deco->deco();
