@@ -14,6 +14,10 @@
 }
 
 /* Header */
+.displayNone{
+    display : none;
+}
+
 header{
     position: sticky;
     z-index: 2;
@@ -54,9 +58,9 @@ li{
 #homePage{
     border-bottom: 3px solid #E6A197;
 } 
-#account img{
+/* #account img{
     display: none;
-}
+} */
 #hamburgerMenu{
     font-size: 1.8em;
     display: none;

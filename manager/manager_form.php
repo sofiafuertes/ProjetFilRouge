@@ -26,7 +26,7 @@ class Manager_form extends Model_Form{
             $query->execute();
 
             // Redirect to the homepage after registration
-            header('Location:/ProjetFilRouge/ProjetFilRouge/home');
+            header('Location:/ProjetFilRouge/account');
             exit(); // Ensures the script stops after the redirect
 
         } catch (Exception $error) {

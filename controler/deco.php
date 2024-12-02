@@ -7,7 +7,7 @@ class Deconnexion{
         session_destroy();
 
         //Je redirige vers la page d'accueil index.php
-        header('Location:/ProjetFilRouge/ProjetFilRouge/home');
+        header('Location:/ProjetFilRouge/home');
         exit;
     }
 }

@@ -50,8 +50,6 @@ public function testData(): array|string {
         if ($password !== $passwordConfirm) {
             return 'Passswords do not match';
         }
-        // Password hash
-        $password = password_hash($password, PASSWORD_BCRYPT);
 
         //Return clean and validate data
         return [$lastName, $first_name, $mail, $password];
@@ -122,16 +120,17 @@ public function testData(): array|string {
             if (empty($user)) {
                 $this->setMessageCo('This email is not registred');
             } else {
-                var_dump($data[1], $user[0]["password_user"]);
+                // var_dump($data[1], $user[0]["password_user"]);
                 if (password_verify($data[1], $user[0]["password_user"])) {
-                    print_r('toto1');
                     $this->setMessageCo('You are connected');
                     $_SESSION['last_name'] = $user[0]['name_user'];
                     $_SESSION['first_name'] = $user[0]['first_name_user'];
                     $_SESSION['mail'] = $user[0]['mail_user'];
-                    print_r($_SESSION);
+                    // print_r($_SESSION);
+                    // Redirect to the homepage after registration
+                    header('Location:/ProjetFilRouge/account');
+                    exit(); // Ensures the script stops after the redirect
                 } else {
-                    print_r('toto2');
                     $this->setMessageCo('The password is not correct');
                 }
             }

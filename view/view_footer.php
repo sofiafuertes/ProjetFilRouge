@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./style/style_footer.css">
 <footer aria-label="Website Footer">
         <div class="logoFooter">
-            <a href="./index.html"><img src="./photos/LogoFooter.png" alt="Logo W&B CeciCo"></a>
+            <a href="/ProjetFilRouge/home"><img src="./photos/LogoFooter.png" alt="Logo W&B CeciCo"></a>
         </div>
 
         <div class="centerFooter">
