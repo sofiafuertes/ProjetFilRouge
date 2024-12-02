@@ -60,7 +60,7 @@ public function testData(): array|string {
     {
         // Ensure request is POST before proceeding
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            var_dump($_POST);
+            //var_dump($_POST);
             // Check if register form is submitted
             if (isset($_POST['registerSubmit'])) {
                 $tab = $this->testData();

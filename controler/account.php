@@ -44,8 +44,6 @@ class Account
         return $this;
     }
 
-
-
     public function displayUserAccount(){
         if(isset($_SESSION["mail"])){
             $this->setFirstName($_SESSION["first_name"]);

@@ -55,16 +55,16 @@ li{
 .navbar a:hover { 
     border-bottom: 3px solid #E6A197;
 }
-#homePage{
-    border-bottom: 3px solid #E6A197;
-} 
-/* #account img{
-    display: none;
-} */
+
 #hamburgerMenu{
     font-size: 1.8em;
     display: none;
 }
+/* Style for the active navigation item */
+.navPages li.activePage a {
+    border-bottom: 3px solid #E6A197;             
+}
+
 
 /* Header responsive */
 @media (max-width: 900px) {

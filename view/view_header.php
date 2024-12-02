@@ -33,8 +33,7 @@
                                 ETSY SHOP</a></li>
                         <li id="login" class="<?php echo $header->getClass()?>" ><a
                                 href="/ProjetFilRouge/login">LOGIN</a></li>
-                        <li id="account" class="<?php echo $header->getClassCo()?>" > <a href="/ProjetFilRouge/account"><img
-                                    src="./icons/icon_user.png" alt="Icon account" width="25px"></a></li>
+                        <li id="account" class="<?php echo $header->getClassCo()?>" > <a href="/ProjetFilRouge/account">ACCOUNT</a></li>
                         <li id="deconnexion" class="<?php echo $header->getClassCo()?>" ><a
                                 href="/ProjetFilRouge/deconnexion">LOG OUT</a></li>
                     </ul>
