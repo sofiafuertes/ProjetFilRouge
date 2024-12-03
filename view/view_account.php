@@ -3,7 +3,7 @@
     <article>
         <section>
             <h1>MY ACCOUNT</h1>
-            <h2>Welcome again!</h2>
+            <!-- <h2>Welcome again!</h2> -->
         </section>
         <section id="personalInfo">
             <h3>Personal information</h3>
@@ -25,5 +25,5 @@
             </div>
         </section>
     </article>
-    <button id="logout">LOGOUT</button>
+    <a id="logout" href="/ProjetFilRouge/deconnexion" class="logout-button">LOGOUT</a>
 </main>

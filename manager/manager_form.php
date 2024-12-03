@@ -1,6 +1,7 @@
 <?php
 
-class Manager_form extends Model_Form{
+class Manager_form extends Model_Form
+{
     public function registerUser(): string
     {
         $mail = $this->getMail();
@@ -34,7 +35,8 @@ class Manager_form extends Model_Form{
             return $error->getMessage();
         }
     }
-    public function readUserByMail($mail): array|string{
+    public function readUserByMail($mail): array|string
+    {
 
         //Connexion with the database
         $dbb = new PDO('mysql:host=localhost;dbname=cecico', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));

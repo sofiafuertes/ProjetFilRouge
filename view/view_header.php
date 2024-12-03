@@ -1,4 +1,3 @@
-<script type="module" src="./javascript/header.js" defer></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +7,11 @@
     <meta name="description"
         content="Handmade ceramic pieces, crafted with love and delivered to your home. Shop unique, personalized pieces on our Etsy store.">
     <link rel="stylesheet" href="./style/style_header.css">
+    <script type="module" src="./javascript/header.js" defer></script>
     <script src="https://kit.fontawesome.com/cdc160965e.js" crossorigin="anonymous"></script>
     <title>CeciCo Ceramics: Handmade Pieces, Where Art Meets Heart</title>
 </head>
+
 <body>
     <header>
         <nav aria-label="Main Navigation">
@@ -24,20 +25,21 @@
                 </div>
                 <div class="centerNav">
                     <ul class="navPages">
-                        <li id="homePage" ><a href="/ProjetFilRouge/home">HOME</a></li>
-                        <li id="aboutMe" ><a href="/ProjetFilRouge/AboutMe">ABOUT ME</a></li>
-                        <li id="products" ><a href="/ProjetFilRouge/products">PRODUCTS</a></li>
-                        <li id="contact" ><a href="/ProjetFilRouge/Contact">CONTACT</a></li>
+                        <li id="homePage"><a href="/ProjetFilRouge/home">HOME</a></li>
+                        <li id="aboutMe"><a href="/ProjetFilRouge/AboutMe">ABOUT ME</a></li>
+                        <li id="products"><a href="/ProjetFilRouge/products">PRODUCTS</a></li>
+                        <li id="contact"><a href="/ProjetFilRouge/Contact">CONTACT</a></li>
                         <li id="etsyShop"><a
                                 href="https://www.etsy.com/fr/shop/CecicoCeramics?ref=l2-about-shopname&from_page=listing">
                                 ETSY SHOP</a></li>
-                        <li id="login" class="<?php echo $header->getClass()?>" ><a
+                        <li id="login" class="<?php echo $header->getClass() ?>"><a
                                 href="/ProjetFilRouge/login">LOGIN</a></li>
-                        <li id="account" class="<?php echo $header->getClassCo()?>" > <a href="/ProjetFilRouge/account">ACCOUNT</a></li>
-                        <li id="deconnexion" class="<?php echo $header->getClassCo()?>" ><a
+                        <li id="account" class="<?php echo $header->getClassCo() ?>"> <a
+                                href="/ProjetFilRouge/account">ACCOUNT</a></li>
+                        <li id="deconnexion" class="<?php echo $header->getClassCo() ?>"><a
                                 href="/ProjetFilRouge/deconnexion">LOG OUT</a></li>
                     </ul>
+                </div>
+            </div>
         </nav>
-        </div>
-        </div>
     </header>

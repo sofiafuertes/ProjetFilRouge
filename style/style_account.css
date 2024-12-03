@@ -21,15 +21,15 @@ article {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid #E6A197;
+    text-decoration: underline #E6A197 ;
 }
 
 
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     color: #666;
     margin-bottom: 2rem;
 }
@@ -43,7 +43,7 @@ h2 {
 }
 
 #personalInfo h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     border-bottom: 2px solid #E6A197;
     width: auto;
@@ -55,7 +55,7 @@ h2 {
 }
 
 #personalInfo ul li {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 10px 0;
 }
 
@@ -93,8 +93,8 @@ h2 {
 }
 
 #whishlistPhoto img {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border: 1px solid #666;
     border-radius: 5px;
     object-fit: cover;

@@ -27,11 +27,14 @@ class ManagerUser
         $this->messageIns = $messageIns;
         return $this;
     }
-//Method for validating the data entered in the registration form
-public function testData(): array|string {
+    //Method for validating the data entered in the registration form
+    public function testData(): array|string
+    {
         //Verify if the fields are empty or not        
-        if (empty($_POST["firstName"]) | empty($_POST["lastName"]) | empty($_POST["mail"]) | 
-        empty($_POST["passwordIns"]) | empty($_POST["passwordConfirm"])) {
+        if (
+            empty($_POST["firstName"]) | empty($_POST["lastName"]) | empty($_POST["mail"]) |
+            empty($_POST["passwordIns"]) | empty($_POST["passwordConfirm"])
+        ) {
             return 'Please fill in all the fields!';
         }
         //Clean data with function sanitize(); 
@@ -40,7 +43,7 @@ public function testData(): array|string {
         $mail = sanitize($_POST['mail']);
         $password = sanitize($_POST['passwordIns']);
         $passwordConfirm = sanitize($_POST['passwordConfirm']);
-        
+
         // Validate email format
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             return 'The email address is not in a valid format.';
@@ -48,14 +51,14 @@ public function testData(): array|string {
 
         //Verify if passwords match
         if ($password !== $passwordConfirm) {
-            return 'Passswords do not match';
+            return 'Passwords do not match';
         }
 
         //Return clean and validate data
         return [$lastName, $first_name, $mail, $password];
     }
 
-//Method for adding a user
+    //Method for adding a user
     public function addUser()
     {
         // Ensure request is POST before proceeding
@@ -82,13 +85,12 @@ public function testData(): array|string {
                         $this->setMessageIns('This email is already registered. Please use another email or log in.');
                     }
                 }
-
             }
         }
         return $this->getMessageIns();
     }
 
-//Method for validating the data entered in the registration form
+    //Method for validating the data entered in the registration form
 
     public function testLoginData(): array|string
     {
@@ -102,15 +104,13 @@ public function testData(): array|string {
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             return 'The email address is not in a valid format.';
         }
-
         return [$mail, $password];
     }
-//Method for user login
+    //Method for user login
 
 
     public function connexionUser()
     {
-        
         if (isset($_POST['connexionSubmit'])) {
             $data = $this->testLoginData();
             //print_r($data);
@@ -127,8 +127,7 @@ public function testData(): array|string {
                     $_SESSION['first_name'] = $user[0]['first_name_user'];
                     $_SESSION['mail'] = $user[0]['mail_user'];
                     // print_r($_SESSION);
-                    // Redirect to the homepage after registration
-                    header('Location:/ProjetFilRouge/account');
+                    header('Location:/ProjetFilRouge/account'); // Redirect to the homepage after registration
                     exit(); // Ensures the script stops after the redirect
                 } else {
                     $this->setMessageCo('The password is not correct');
