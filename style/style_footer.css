@@ -4,7 +4,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* position: fixed; */
+    /* position:sticky; */
     bottom: 0;
     height: 80px;
     padding-left:5px ;

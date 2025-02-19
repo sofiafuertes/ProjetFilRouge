@@ -3,6 +3,12 @@
 session_start();
 
 //* Inlclure ressources communes a chaque route
+include './controler/header.php';
+include 'env.php';
+$header = new Header();
+$header->displayNav();
+include './view/view_header.php';
+
 
 
 
@@ -20,54 +26,41 @@ switch ($path) {
     case $path === "/ProjetFilRouge/home":
         include './utils/functions.php';
         include './modele/modele_home.php';
-        include './controler/header.php';
         include './controler/home.php';
-        $header = new Header();
-        $header->displayNav();
-        include './view/view_header.php';
+        
         include './view/view_home.php';
-        include './view/view_footer.php';
         break;
 
     case $path === "/ProjetFilRouge/AboutMe":
         include './utils/functions.php';
         include './modele/modele_aboutMe.php';
-        include './controler/header.php';
         include './controler/aboutMe.php';
-        $header = new Header();
-        $header->displayNav();
-        include './view/view_header.php';
+        
         include './view/view_aboutMe.php';
-        include './view/view_footer.php';
         break;
 
     case $path === "/ProjetFilRouge/Contact":
         include './utils/functions.php';
-        include './controler/header.php';
         include './controler/contact.php';
-        $header = new Header();
-        $header->displayNav();
-        include './view/view_header.php';
+        
         include './view/view_contact.php';
-        include './view/view_footer.php';
         break;
 
     case $path === "/ProjetFilRouge/products":
         include './utils/functions.php';
-        include './controler/header.php';
+        
+        include './modele/modele_products.php';
+        include './manager/manager_product.php';
         include './controler/products.php';
-        $header = new Header();
-        $header->displayNav();
-        include './view/view_header.php';
+        $productsController = new ProductsControler();
+        $products = $productsController->displayProducts();
+    
         include './view/view_products.php';
-        include './view/view_footer.php';
         break;
 
     case $path === "/ProjetFilRouge/login":
         include './utils/functions.php';
-        include './controler/header.php';
-        $header = new Header();
-        $header->displayNav();
+        
         include './modele/modele_form.php';
         include './manager/manager_form.php';
         include './controler/login.php';
@@ -82,23 +75,17 @@ switch ($path) {
             }
         }
 
-        include './view/view_header.php';
         include './view/view_login.php';
-        include './view/view_footer.php';
         break;
 
         case $path === "/ProjetFilRouge/account":
             include './utils/functions.php';
-            include './controler/header.php';
-            include './controler/account.php';
+                include './controler/account.php';
             $account = new Account();
             $account->displayUserAccount();
-            $header = new Header();
-            $header->displayNav();
-            include './view/view_header.php';
+  
             include './view/view_account.php';
-            include './view/view_footer.php';
-            break;
+                break;
 
 
         case $path === "/ProjetFilRouge/deconnexion":
@@ -109,3 +96,5 @@ switch ($path) {
 
 
     }
+
+    include './view/view_footer.php';

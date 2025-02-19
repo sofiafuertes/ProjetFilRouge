@@ -7,6 +7,8 @@
     <meta name="description"
         content="Handmade ceramic pieces, crafted with love and delivered to your home. Shop unique, personalized pieces on our Etsy store.">
     <link rel="stylesheet" href="./style/style_header.css">
+    <link rel="stylesheet" href="./style/style_footer.css">
+    <link rel="stylesheet" href="./style/style_products.css">
     <script type="module" src="./javascript/header.js" defer></script>
     <script src="https://kit.fontawesome.com/cdc160965e.js" crossorigin="anonymous"></script>
     <title>CeciCo Ceramics: Handmade Pieces, Where Art Meets Heart</title>

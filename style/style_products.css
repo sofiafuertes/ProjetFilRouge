@@ -1,36 +1,60 @@
 /* Main */
-.titre{
+
+#productsPage{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 15px;
+}
+
+.emptyCard{
+    text-align: center;
+    margin: 100px;
+}
+.pageTitle{
+    grid-column: 1/-1;
+    text-align: center;
+    padding-bottom: 30px;
+    text-decoration: underline 3px #E6A197; 
+}
+
+.containerCards {
+    grid-column:2/10;
+}
+.cards{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    
-    }
-    article{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-evenly;   
-    
-    }
-    .product{
-        width: 30%;
-    }
-    .product img{
-        width: 90%;
-    }
-    .product p{
-        font-family: 'Petrona';
-    }
-    .titre h1{
-        padding-bottom: 30px;
-        text-decoration: underline 3px #E6A197; 
-    }
-    .pinkLine{
-        background-color: #E6A197;
-        width: 6px;
-        height: 30px;
-        border-radius: 10px;
-        padding-bottom: 20px;
-    }
+    justify-content: space-evenly;
+}
+
+.oneCard {
+    width: 31%;
+    border-radius: 3px;
+    background-color: #ffe0e65f;
+    border: 1px solid #E6A197;
+}
+.oneCard img {
+    width: 100%;
+    border-radius: 3px;
+    height: 300px;
+    object-fit:cover;
+    object-position: center;
+}
+
+.oneCard h3 {
+    text-align: left;
+    align-self: flex-start;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+.oneCard p {
+    text-align: left;
+    margin: 5px;
+    font-family: 'Petrona';
+} 
+.productPrice{
+    justify-self: flex-end;
+    bottom: 0;
+}
