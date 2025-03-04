@@ -1,33 +1,29 @@
 <?php
-//* J'active la session
+//* Active the session
 session_start();
 
-//* Inlclure ressources communes a chaque route
+//* Include the files communs
 include './controler/header.php';
 include 'env.php';
 $header = new Header();
 $header->displayNav();
 include './view/view_header.php';
 
-
-
-
-//Analyse de l'URL avec parse_url() et retourne ses composants
+// Analyse the URL to get the path
 $url = parse_url($_SERVER['REQUEST_URI']);
 
-//test soit l'url a une route sinon on renvoi à la racine
+//Test the value of the path in the URL
 $path = isset($url['path']) ? $url['path'] : '/';
 
-/*--------------------------ROUTER -----------------------------*/
+/*-------------------------- Router -----------------------------*/
 
-//test de la valeur $path dans l'URL et import de la ressource
+//Test la valeur de la variable $path
 switch ($path) {
 
     case $path === "/ProjetFilRouge/home":
         include './utils/functions.php';
         include './modele/modele_home.php';
         include './controler/home.php';
-        
         include './view/view_home.php';
         break;
 

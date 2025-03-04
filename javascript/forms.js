@@ -4,7 +4,6 @@ const nameForm = document.querySelector("#name");
 console.log(nameForm);
 const mailForm = document.querySelector("#mail");
 console.log(mailForm);
-const messageForm = document.querySelector("#message");
 console.log(messageForm);
 
 const errorMessageName = document.createElement("div");
@@ -66,6 +65,7 @@ regex /^[a-zA-Z0-9\s.,!?'\-()]{20,600}$/ - Allows alphanumeric characters, space
 By restricting input to this regex pattern, we help prevent potential SSC injection attacks.
 */
 
+const messageForm = document.querySelector("#message");
 const errorMessageText = document.createElement("div");
 messageForm.after(errorMessageText);
 errorMessageText.innerText = ``;
@@ -82,7 +82,7 @@ messageForm.addEventListener("blur", () => {
         if (messageRegex.test(messageForm.value)) {
             errorMessageText.innerText = ``;
         } else {
-            errorMessageText.innerHTML = `- Your message must be between 20 and 600 characters long. 
+            errorMessageText.innerText = `- Your message must be between 20 and 600 characters long. 
             Please use only letters, numbers, spaces, and the following punctuation: . , ! ? ' - ( )`;
         }
     }
